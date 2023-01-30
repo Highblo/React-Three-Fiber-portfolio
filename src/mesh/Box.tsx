@@ -2,11 +2,9 @@ import { FC, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 
-type BoxProps = {
-  position: [x: number, y: number, z: number];
-};
+import { ThreeType } from "../types/ThreeType";
 
-export const Box: FC<BoxProps> = (props) => {
+export const Box: FC<ThreeType> = (props) => {
   const mesh = useRef<Mesh>(null!);
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
